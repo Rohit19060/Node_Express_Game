@@ -2,6 +2,7 @@ const express = require("express");
 var bodyParser = require("body-parser");
 const Game = require("./game");
 const app = express();
+
 app.use(express.static("www"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
