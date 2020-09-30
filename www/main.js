@@ -1,3 +1,4 @@
+// For Updating Data in html (View)
 function lCheck() {
   if (localStorage.getItem("uScore")) {
     $("#score").html(parseInt(localStorage.getItem("uScore")));
@@ -6,6 +7,7 @@ function lCheck() {
   }
 }
 
+// Updating User Score if win
 function sCoreUpdate() {
   if (localStorage.getItem("uScore")) {
     let uScore = parseInt(localStorage.getItem("uScore"));
@@ -15,6 +17,7 @@ function sCoreUpdate() {
   }
 }
 
+// Attempt updates every time user click any image
 function attemptUpdate() {
   if (localStorage.getItem("attempts")) {
     let attempts = parseInt(localStorage.getItem("attempts"));
@@ -24,6 +27,7 @@ function attemptUpdate() {
   }
 }
 
+// Displaying final score after every 10 attempts
 function finalScore() {
   let sContent = `Your Score:  ${localStorage.getItem("uScore")}`;
   $("#win").html(
@@ -35,13 +39,17 @@ function finalScore() {
   localStorage.removeItem("uScore");
 }
 
+// Calling lCheck for initial scores based on local storage
 lCheck();
-$("input[name='type']").click(function async() {
+
+// Function for calling on every radio button as image clicked
+$("input[name='type']").click(function () {
   var radioValue = $("input[name='type']:checked").val();
+  // Sending post request to the server with radio value as data
   $.post(
     "element",
     { body: radioValue, dataType: "xml", type: radioValue },
-    function await(xData, status) {
+    function (xData, status) {
       attemptUpdate();
       let attempts = localStorage.getItem("attempts");
       console.log(xData);
