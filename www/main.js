@@ -25,15 +25,17 @@ function attemptUpdate() {
 }
 
 function finalScore() {
-  let sContent = `Your Score: ${localStorage.getItem("uScore")}`;
+  let sContent = `Your Score:  ${localStorage.getItem("uScore")}`;
+  $("#win").html(
+    "<strong>Game Finish <br>" + sContent + "<br> Want to Play Again!</strong>"
+  );
+  $("#win").addClass("win");
+  lCheck();
   localStorage.removeItem("attempts");
   localStorage.removeItem("uScore");
-  alert("Game Finish\n" + sContent);
-  lCheck();
 }
 
 lCheck();
-
 $("input[name='type']").click(function async() {
   var radioValue = $("input[name='type']:checked").val();
   $.post(
@@ -47,16 +49,21 @@ $("input[name='type']").click(function async() {
         sCoreUpdate();
       }
       if (xData.winner == "Draw") {
-        alert(`Attempt: ${attempts}/10\nIt's Draw`);
-      } else {
-        alert(
-          `Attempt: ${attempts}/10\nWinner: ${xData.winner}\nType: ${xData.type}`
+        $("#win").html(
+          `Attempt: <strong>${attempts}</strong>/10 <br> <strong>It's Draw</strong>`
         );
+        $("#win").addClass("win");
+      } else {
+        $("#win").html(
+          `Attempt:  <strong>${attempts}</strong>/10 <br> Winner: <strong>${xData.winner}</strong> <br> Type: <strong>${xData.type}</strong>`
+        );
+        $("#win").addClass("win");
       }
       if (attempts >= 10) {
         finalScore();
+      } else {
+        lCheck();
       }
-      lCheck();
     }
   );
 });

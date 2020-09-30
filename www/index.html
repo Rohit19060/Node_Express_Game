@@ -46,6 +46,15 @@
             margin-top: 350px;
 
         }
+
+        .win {
+            margin: 0 auto;
+            max-width: 250px;
+            padding: 20px;
+            border: 2px red dotted;
+            border-radius: 15px;
+            font-size: 20px;
+        }
     </style>
 </head>
 
@@ -53,7 +62,6 @@
     <h2>Your Score: <span id="score">0</span></h2>
     <h3>Choose Your Element against Computer</h3>
     <div class="main">
-
         <label>
             <input type="radio" name="type" id="fire" value="Fire">
             <img src="images/fire.png" alt="fire">
@@ -76,6 +84,7 @@
             <img src="images/ice.png" alt="ice">
         </label>
     </div>
+    <div id="win"></div>
     <script src="./jquery-3.5.1.min.js"></script>
     <script src="./main.js"></script>
 </body>
