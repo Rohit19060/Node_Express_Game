@@ -40,6 +40,7 @@ module.exports = class Element {
 
       // If computer in win array => Computer wins else if not then user wins
       for (let i = 0; i < winArray.length; i++) {
+        // console.count();
         if (this.nCom == winArray[i]) {
           sReturn = `Computer`;
           wType = this.nCom;
