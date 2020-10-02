@@ -18,8 +18,6 @@
   },
   "homepage": "https://github.com/Rohit19060/Node_Express_Game#readme",
   "dependencies": {
-    "express": "^4.17.1",
-    "nodemon": "^2.0.4",
-    "readline-sync": "^1.4.10"
+    "express": "^4.17.1"
   }
 }

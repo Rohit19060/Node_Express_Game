@@ -1,7 +1,7 @@
 module.exports = class Element {
   // Function that choose computer element randomly
   pickCom() {
-    let elements = ["Fire", "Water", "Electric", "Grass", "Ice"];
+    const elements = [`Fire`, `Water`, `Electric`, `Grass`, `Ice`];
     this.nCom = elements[Math.floor(Math.random() * elements.length)];
   }
 
@@ -12,34 +12,42 @@ module.exports = class Element {
 
   check(uInput) {
     this.pickCom();
-    let sReturn = "";
-    let wType = "";
+    let sReturn = ``;
+    let wType = ``;
     let winArray = [];
     // Checking for draw
     if (uInput == this.nCom) {
-      sReturn = "Draw";
+      sReturn = `Draw`;
     } else {
       // if not draw then defining win array according to user element
-      if (uInput == "Fire") {
-        winArray = ["Water", "Ice"];
-      } else if (this.nCom == "Water") {
-        winArray = ["Grass", "Ice", "Fire"];
-      } else if (this.nCom == "Electric") {
-        winArray = ["Water", "Grass", "Ice"];
-      } else if (this.nCom == "Grass") {
-        winArray = ["Fire", "Ice", "Water"];
-      } else {
-        winArray = ["Electric", "Fire", "Water"];
+      switch (uInput) {
+        case `Fire`:
+          winArray = [`Water`, `Ice`];
+          break;
+        case `Water`:
+          winArray = [`Ice`, `Fire`];
+          break;
+        case `Electric`:
+          winArray = [`Water`, `Ice`];
+          break;
+        case `Grass`:
+          winArray = [`Fire`, `Electric`];
+          break;
+        default:
+          winArray = [`Electric`, `Fire`];
+          break;
       }
 
-      // If computer in win array => Computer wins else user win
-      if (winArray.includes(this.nCom)) {
-        sReturn = "Computer";
-        wType = this.nCom;
-      } else {
-        sReturn = "You";
-        wType = uInput;
+      // If computer in win array => Computer wins else if not then user wins
+      for (let i = 0; i < winArray.length; i++) {
+        if (this.nCom == winArray[i]) {
+          sReturn = `Computer`;
+          wType = this.nCom;
+          return [sReturn, wType];
+        }
       }
+      sReturn = `You`;
+      wType = uInput;
     }
     return [sReturn, wType];
   }

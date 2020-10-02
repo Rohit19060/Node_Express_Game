@@ -1,15 +1,15 @@
 // Imports
-const express = require("express");
-var bodyParser = require("body-parser");
-const Game = require("./game");
+const express = require(`express`);
+const bodyParser = require(`body-parser`);
+const Game = require(`./game`);
 const app = express();
 
-app.use(express.static("www"));
+app.use(express.static(`www`));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Post request handler and response as json
-app.post("/element", function (req, res) {
+app.post(`/element`, function (req, res) {
   let uInput = req.body.type;
   let newObj = new Game();
   let resData = newObj.check(uInput);
@@ -19,8 +19,8 @@ app.post("/element", function (req, res) {
   });
 });
 
-var port = process.env.PORT || parseInt(process.argv.pop()) || 3000;
+const port = process.env.PORT || parseInt(process.argv.pop()) || 3000;
 
-app.listen(port, () =>
-  console.log(`App listening on http://localhost:${port}`)
-);
+app.listen(port, function () {
+  console.log(`App listening on http://localhost:${port}`);
+});
