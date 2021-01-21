@@ -4,12 +4,10 @@ module.exports = class Element {
     const elements = [`Fire`, `Water`, `Electric`, `Grass`, `Ice`];
     this.nCom = elements[Math.floor(Math.random() * elements.length)];
   }
-
   /**
    * Print a message to message container
    * @param {string} uInput - Data from client aka user input
    */
-
   check(uInput) {
     this.pickCom();
     let sReturn = ``;
