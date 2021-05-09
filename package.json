@@ -1,26 +1,56 @@
 {
-  "name": "node_express_game",
+  "name": "node-express-elementals-game",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+  "description": "A Node express server-side game of choosing elements opposite to computer",
+  "author": {
+    "name": "Rohit Jain",
+    "email": "rohitjain19060@gmail.com",
+    "url": "https://kingtechnologies.in/"
   },
+  "contributors": [],
+  "main": "app.js",
+  "homepage": "https://powerful-woodland-97962.herokuapp.com/",
+  "private": true,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Rohit19060/Node_Express_Game.git"
+    "url": "https://github.com/Rohit19060/node-express-elementals-game"
   },
-  "author": "",
-  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Rohit19060/Node_Express_Game/issues"
+    "url": "https://github.com/Rohit19060/node-express-elementals-game/issues"
   },
-  "homepage": "https://github.com/Rohit19060/Node_Express_Game#readme",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "express": "^4.17.1"
+  },
+  "scripts": {
+    "start": "node app.js"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
-  }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "engines": {
+    "node": ">= 15.7.0",
+    "npm": ">= 7.0.10",
+    "yarn": "^1.22.5"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "game",
+    "Elementals",
+    "element-game"
+  ],
+  "license": "MIT"
 }
