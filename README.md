@@ -115,11 +115,11 @@ It's a simple app so just one command is fine. this command will execute `node a
 
 ## 📂 Directory Structure
 
-> [`app.js`](https://github.com/Rohit19060/node-express-elementals-game/blob/main/app.js "App"): Main server file that will host the server and also server all the static content using express.
+> [`./app.js`](https://github.com/Rohit19060/node-express-elementals-game/blob/main/app.js "App"): Main server file that will host the server and also server all the static content using express.
 
-> [`game.js`](https://github.com/Rohit19060/node-express-elementals-game/blob/main/game.js "Game"): All the business logic is in this file.
+> [`./game.js`](https://github.com/Rohit19060/node-express-elementals-game/blob/main/game.js "Game"): All the business logic is in this file.
 
-> [`docs/*.*`](https://github.com/Rohit19060/node-express-elementals-game/tree/main/docs "Static Folder"): All the static files are in this directory
+> [`./docs/*.*`](https://github.com/Rohit19060/node-express-elementals-game/tree/main/docs "Static Folder"): All the static files are in this directory
 
 ## 🎊 Future Updates
 
