@@ -145,6 +145,7 @@ It's a simple app so just one command is fine. this command will execute `node a
 <a href="https://www.paypal.me/kingrohitJ" title="PayPal"><img src="https://kingtechnologies.in/assets/images/Paypal.png" alt="PayPal"/></a>
 <a href="https://www.buymeacoffee.com/rohitjain" title="Buy me a Coffee"><img src="https://kingtechnologies.in/assets/images/Coffee.png" alt="Buy me a Coffee"/></a>
 <a href="https://ko-fi.com/rohitjain" title="Ko-fi"><img src="https://kingtechnologies.in/assets/images/Kofi.png" alt="Ko-fi"/></a>
+<a href="https://www.patreon.com/KingTechnologies" title="Patreon"><img src="https://kingtechnologies.in/assets/images/Patreon.png" alt="Patreon"/></a>
 </p>
 
 <p align="center">Made with JavaScript & ❤️ in India</p>
